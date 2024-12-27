@@ -1,0 +1,41 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 32 // OLED display height, in pixels
+
+// Define reset pin and I2C address (0x3C is common for 128x32 OLED)
+#define OLED_RESET    -1
+#define SCREEN_ADDRESS 0x3C ///< I2C address of the OLED display (0x3C for 128x32)
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+<<DISPLAY HELLOWORLD>>
+----------------------------
+void setup() {
+  Serial.begin(9600);
+
+  // Initialize the display
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // If initialization fails, stop here
+  }
+
+  // Clear the display and show initial screen
+  display.clearDisplay();
+
+  // Set text properties
+  display.setTextSize(1);      // Normal 1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE); // Draw white text
+  display.setCursor(0, 0);     // Start at top-left corner
+
+  // Print "Hello, World!" on the screen
+  display.println(F("Hello, World!"));
+
+  // Display everything we've drawn on the screen
+  display.display();
+}
+
+void loop() {
+  // Nothing to loop
+}
