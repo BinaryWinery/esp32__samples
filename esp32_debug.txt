@@ -5,3 +5,10 @@ link : https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?
 esp8266 port not recognizing error
 driver to install : CH340 Driver
 link : https://sparks.gogo.co.nz/ch340.html?srsltid=AfmBOooQBVQGl9hlytzEkQdWay842oJVwoz_IkGWPYTPBKEKG3nRv2o1
+
+setup 
+setup esp32 boards manager url:
+esp32 :file > preference > Additional boards manager URLs > [paste] >>  https://espressif.github.io/arduino-esp32/package_esp32_index.json
+
+install esp32 board
+Tools > Board > Board manager > [install] >> esp32 by espressif
