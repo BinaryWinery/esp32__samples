@@ -1,0 +1,7 @@
+esp32 port not recognizing error
+driver to install : CP210x Windows Drivers
+link : https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads
+
+esp8266 port not recognizing error
+driver to install : CH340 Driver
+link : https://sparks.gogo.co.nz/ch340.html?srsltid=AfmBOooQBVQGl9hlytzEkQdWay842oJVwoz_IkGWPYTPBKEKG3nRv2o1
